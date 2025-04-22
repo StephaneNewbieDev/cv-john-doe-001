@@ -1,0 +1,66 @@
+.realisations {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.realisations h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Empêcher le contenu de dépasser */
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: block; /* Supprimer l'espace sous l'image */
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 1rem;
+}
+
+.project-item .description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.project-item .technologies {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.project-item a {
+  display: block;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.project-item a:hover {
+  background-color: #0056b3;
+}

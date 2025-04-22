@@ -1,0 +1,25 @@
+.mentions-legales {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.mentions-legales h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.mentions-legales h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mentions-legales p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
