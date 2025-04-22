@@ -1,0 +1,37 @@
+.accueil {
+  padding: 4rem 0; /* Espacement vertical plus important */
+  background-color: #fff; /* Fond blanc */
+}
+
+.accueil-content {
+  display: flex; /* Utiliser Flexbox pour aligner la photo et l'intro */
+  align-items: center; /* Les aligner verticalement au centre */
+  gap: 2rem; /* Espacement entre la photo et l'intro */
+}
+
+.photo {
+  flex-shrink: 0; /* Empêcher la photo de rétrécir */
+  width: 200px; /* Largeur de la photo */
+  height: 200px; /* Hauteur de la photo (pour un aspect carré) */
+  border-radius: 50%; /* Pour rendre la photo circulaire */
+  overflow: hidden; /* Empêcher le contenu de dépasser du cercle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Remplir le cercle sans déformation */
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.intro .lead {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
