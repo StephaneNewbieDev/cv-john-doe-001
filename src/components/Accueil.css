@@ -1,37 +1,141 @@
-.accueil {
-  padding: 4rem 0; /* Espacement vertical plus important */
-  background-color: #fff; /* Fond blanc */
+.accueil-hero {
+  position: relative; /* Pour positionner l'image de fond et le contenu */
+  height: 500px; /* Ajustez la hauteur selon vos préférences */
+  display: flex; /* Pour centrer le contenu */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  text-align: center; /* Centrer le texte à l'intérieur de hero-content */
+  color: #fff; /* Couleur du texte sur l'image de fond */
+  overflow: hidden; /* Empêcher l'image de dépasser */
 }
 
-.accueil-content {
-  display: flex; /* Utiliser Flexbox pour aligner la photo et l'intro */
-  align-items: center; /* Les aligner verticalement au centre */
-  gap: 2rem; /* Espacement entre la photo et l'intro */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/src/images/hero-bg.jpg"); /* Remplacez par le chemin de votre image de fond */
+  background-size: cover; /* L'image couvre tout l'espace */
+  background-position: center; /* L'image est centrée */
+  z-index: -1; /* Placer l'image derrière le contenu */
 }
 
-.photo {
-  flex-shrink: 0; /* Empêcher la photo de rétrécir */
-  width: 200px; /* Largeur de la photo */
-  height: 200px; /* Hauteur de la photo (pour un aspect carré) */
-  border-radius: 50%; /* Pour rendre la photo circulaire */
-  overflow: hidden; /* Empêcher le contenu de dépasser du cercle */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Superposition sombre pour la lisibilité du texte */
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Ajustez la taille selon vos préférences */
+  margin-bottom: 0.5rem;
+}
+
+.hero-content .lead {
+  font-size: 1.5rem; /* Ajustez la taille selon vos préférences */
+  margin-bottom: 2rem;
+}
+
+.hero-content .button {
+  display: inline-block;
+  background-color: #007bff; /* Couleur du bouton */
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .button:hover {
+  background-color: #0056b3; /* Couleur du bouton au survol */
+}
+
+.a-propos {
+  padding: 4rem 0;
+  background-color: #f9f9f9; /* Couleur de fond légèrement grise */
+}
+
+.a-propos h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.a-propos-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
+  gap: 2rem;
+  align-items: start; /* Aligner les éléments en haut */
+}
+
+.a-propos-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.a-propos-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Bords arrondis pour l'image */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
-.photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Remplir le cercle sans déformation */
+.a-propos-skills {
+  grid-column: 1 / 3; /* S'étend sur les deux colonnes */
+  margin-top: 3rem;
 }
 
-.intro h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+.a-propos-skills h3 {
+  font-size: 1.5rem;
   color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.intro .lead {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
+.skill-bar {
+  margin-bottom: 1rem;
 }
+
+.skill-bar span {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+  background-color: #e9ecef; /* Couleur de fond de la barre */
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden; /* Empêcher le texte de dépasser */
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem; /* Pour espacer le texte du début */
+  font-size: 0.8rem;
+  color: #fff; /* Couleur du texte à l'intérieur de la barre */
+}
+
+.progress-bar::before {
+  content: "";
+  background-color: #007bff; /* Couleur de la barre de progression */
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+/* Ajoutez des règles spécifiques pour la largeur de chaque barre via style en ligne dans APropos.tsx */
+
+/* Pour une mise en page plus responsive, vous pourriez ajouter des media queries ici */
